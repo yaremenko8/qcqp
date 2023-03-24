@@ -26,7 +26,7 @@ from __future__ import division
 import numpy as np
 import scipy.sparse as sp
 import cvxpy as cvx
-from cvxpy.utilities import coeff_extractor as QuadCoeffExtractor
+from cvxpy.utilities import QuadCoeffExtractor
 from numpy import linalg as LA
 from collections import defaultdict
 from itertools import chain
@@ -292,7 +292,7 @@ def get_id_map(xs):
     N = 0
     for x in xs:
         id_map[x.id] = N
-        N += x.shape[0]*x.shape[1]
+        N += x.size[0]*x.size[1]
     return id_map, N
 
 def assign_vars(xs, vals):
