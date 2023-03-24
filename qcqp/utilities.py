@@ -292,7 +292,7 @@ def get_id_map(xs):
     N = 0
     for x in xs:
         id_map[x.id] = N
-        N += x.size[0]*x.size[1]
+        N += x.shape[0]*x.shape[1]
     return id_map, N
 
 def assign_vars(xs, vals):
