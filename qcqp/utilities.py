@@ -26,7 +26,7 @@ from __future__ import division
 import numpy as np
 import scipy.sparse as sp
 import cvxpy as cvx
-from cvxpy.utilities import QuadCoeffExtractor
+from cvxpy.utilities import coeff_extractor as QuadCoeffExtractor
 from numpy import linalg as LA
 from collections import defaultdict
 from itertools import chain
